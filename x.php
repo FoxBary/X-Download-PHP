@@ -160,7 +160,7 @@ if (rand(1, 100) <= 10) cleanOldCache();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VmShell - 全球云计算 & 视频下载专家</title>
+    <title>VmShell-CMIN2.香港,全球云计算 & 视频搬运工下载专家</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -205,10 +205,10 @@ if (rand(1, 100) <= 10) cleanOldCache();
                 </div>
                 <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight leading-tight">
                     (推特)X视频 <br>
-                    <span class="text-blue-600">一键极速下载</span>
+                    <span class="text-blue-600">香港CMI一键极速下载</span>
                 </h1>
                 <p class="text-xl text-slate-500 max-w-xl">
-                    VmShell 提供的专业推特视频提取工具，支持高清画质，极速分析，保护隐私。只需粘贴链接，剩下的交给我们。
+                    VmShell 提供的专业推特高清视频提取工具，支持高清画质，视频搬运工的高速助理。只需粘贴链接，剩下的交给我们:-)
                 </p>
                 
                 <div class="p-8 rounded-3xl glass shadow-2xl border-2 border-blue-100 space-y-6">
@@ -221,7 +221,7 @@ if (rand(1, 100) <= 10) cleanOldCache();
                             </button>
                         </div>
                         <button id="extract-btn" onclick="extractVideos()" class="px-10 py-5 rounded-2xl btn-gradient text-white font-bold text-lg shadow-xl shadow-blue-500/40 flex items-center justify-center gap-3">
-                            <span id="btn-text">🔍 分析提取</span>
+                            <span id="btn-text">🔍 视频提取</span>
                             <span id="btn-loading" class="hidden animate-spin h-6 w-6 border-4 border-white/30 border-t-white rounded-full"></span>
                         </button>
                     </div>
@@ -271,7 +271,7 @@ if (rand(1, 100) <= 10) cleanOldCache();
                     <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center text-3xl">🛡️</div>
                     <h3 class="text-2xl font-bold">稳定安全</h3>
                     <p class="text-slate-500 leading-relaxed">
-                        承诺 99.99% 在线率，24/7 技术支持。支持多种支付方式，包括支付宝、PayPal及加密货币。
+                        承诺 99.99% 在线率，24/7 技术支持。支持多种支付方式，包括支付宝、PayPal及加密货币USDT。
                     </p>
                 </div>
             </div>
@@ -548,7 +548,7 @@ if (rand(1, 100) <= 10) cleanOldCache();
                     </div>
                     <div class="flex gap-2">
                         <a href="?serve_video=${video.filename}" download="vmshell_video_${index+1}.mp4" class="px-4 py-2 rounded-xl bg-blue-600 text-white text-sm font-bold hover:bg-blue-700 transition-colors">下载</a>
-                        <button onclick="copyUrl('${video.url}')" class="px-4 py-2 rounded-xl bg-slate-100 text-slate-600 text-sm font-bold hover:bg-slate-200 transition-colors">复制</button>
+                        
                     </div>
                 `;
                 videoItems.appendChild(item);
