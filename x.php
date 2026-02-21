@@ -242,6 +242,7 @@ $testimonials = [
     <meta property="og:description" content="VmShell 提供專業推特高清視頻提取工具，支持高清畫質，香港CMI一键极速下載。">
     <meta property="og:type" content="website">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://vmshell.com/templates/kohost/img/favicon.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
