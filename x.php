@@ -5,6 +5,7 @@
  * Optimized for PC Wide Screen, Responsive, and Elegant
  * Preserved: All original text, images, videos, links
  * Added: Card-style layout, testimonials carousel, enhanced formatting
+ * Fixed: Twitter video extraction using twdown.net API + IP default value
  */
 
 // ==================== Configuration ====================
@@ -58,6 +59,45 @@ function downloadVideo($videoUrl) {
     return @file_get_contents($videoUrl, false, $context);
 }
 
+// ==================== 新增：使用 twdown.net API 提取推特视频 ====================
+function extractFromTwdownAPI($twitterUrl) {
+    $apiUrl = 'https://twdown.net/download.php';
+    $postData = http_build_query(['URL' => $twitterUrl]);
+    
+    $context = stream_context_create([
+        'http' => [
+            'method' => 'POST',
+            'header' => 'Content-type: application/x-www-form-urlencoded',
+            'content' => $postData,
+            'timeout' => 30,
+            'user_agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        ],
+        'https' => [
+            'method' => 'POST',
+            'header' => 'Content-type: application/x-www-form-urlencoded',
+            'content' => $postData,
+            'timeout' => 30,
+            'user_agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+            'verify_peer' => false
+        ]
+    ]);
+    
+    $html = @file_get_contents($apiUrl, false, $context);
+    if (!$html) return [];
+    
+    $videos = [];
+    // 提取所有视频链接 - 匹配 href="https://video.twimg.com/..." 的模式
+    if (preg_match_all('/href="(https:\/\/video\.twimg\.com\/[^"]+\.mp4)"/', $html, $matches)) {
+        foreach ($matches[1] as $videoUrl) {
+            if (!empty($videoUrl) && strpos($videoUrl, 'video.twimg.com') !== false) {
+                $videos[] = $videoUrl;
+            }
+        }
+    }
+    
+    return array_unique($videos);
+}
+
 function extractFromTwitSaveImproved($twitterUrl) {
     $infoUrl = 'https://twitsave.com/info?url=' . urlencode($twitterUrl);
     $context = stream_context_create([
@@ -105,7 +145,10 @@ function extractTwitterVideos($twitterUrl) {
     if (empty($twitterUrl)) return [];
     cleanOldCache();
     $twitterUrl = str_replace('x.com', 'twitter.com', preg_replace('/\?.*/', '', $twitterUrl));
-    $videos = extractFromTwitSaveImproved($twitterUrl);
+    
+    // 优先使用 twdown.net API（最可靠）
+    $videos = extractFromTwdownAPI($twitterUrl);
+    if (empty($videos)) $videos = extractFromTwitSaveImproved($twitterUrl);
     if (empty($videos)) $videos = extractFromNitter($twitterUrl);
     
     $cachedVideos = [];
@@ -155,6 +198,21 @@ if (isset($_GET['serve_video'])) {
 }
 
 if (rand(1, 100) <= 10) cleanOldCache();
+
+// ==================== 获取用户 IP 地址函数 ====================
+function getUserIP() {
+    // 优先使用 X-Forwarded-For 获取真实 IP
+    if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ips = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
+        return trim($ips[0]);
+    }
+    // 其次使用 X-Real-IP
+    if (!empty($_SERVER['HTTP_X_REAL_IP'])) {
+        return $_SERVER['HTTP_X_REAL_IP'];
+    }
+    // 最后使用 REMOTE_ADDR
+    return $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1';
+}
 
 function translateIPKey($key) {
     $translation = [
@@ -471,7 +529,7 @@ $testimonials = [
                     <form method="post" action="" class="flex flex-col md:flex-row items-end gap-4">
                         <div class="flex-1 w-full">
                             <label class="block text-sm font-semibold text-slate-700 mb-2">輸入 IP 地址</label>
-                            <input type="text" id="ip_address" name="ip_address" class="w-full px-4 py-3 rounded-lg border-2 border-slate-300 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all" placeholder="例如: 8.8.8.8 或 1.1.1.1" required>
+                           <input type="text" id="ip_address" name="ip_address" class="w-full px-4 py-3 rounded-lg border-2 border-slate-300 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all" placeholder="例如: 8.8.8.8 或 1.1.1.1" value="<?php echo htmlspecialchars(getUserIP()); ?>" required>
                         </div>
                         <button type="submit" class="px-8 py-3 rounded-lg btn-gradient text-white font-semibold shadow-lg shadow-blue-500/40 hover:shadow-blue-500/60 transition-all whitespace-nowrap">
                             🔍 查询
