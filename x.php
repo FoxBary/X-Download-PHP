@@ -562,18 +562,19 @@ $testimonials = [
             </h2>
             <div class="bg-white rounded-2xl border border-slate-200 shadow-lg p-8 md:p-12 space-y-6">
                 <div class="prose prose-lg max-w-none text-slate-700 space-y-4">
-                    <p>尊敬的 VmShell 用戶，您好！時光荏苒，歲月如梭。VmShell INC 全體同仁向您致以最誠摯的問候与新春祝福！</p>
-                    <p>2026 年，对 VmShell INC 而言，更是意義非凡的一年。我們很榮幸地宣佈，VmShell INC 已经走過了五个輝煌的春秋！自 2021 年成立以來，VmShell INC 始終秉持着「客戶至上、技術創新」的服務理念，深耕雲端運算服務領域，专注于全球數據中心虛擬機服務器租賃与軟件開發。</p>
-                    <p>我們致力于为全球用戶提供穩定、高效、安全的雲端解決方案，并感謝您五年来对我們的信任与支持，正是有了您的陪伴，我們才能不斷成長与進步。</p>
-                    <p>为慶祝公司成立五週年，VmShell INC 特別推出一系列「VmShell2026 五週年感恩反饋活動」。我們精心準備了多項超值優惠，涵蓋香港、美國、日本及英國等多個熱門地區的優質產品，旨在为您的業務發展提供更强大的助力！</p>
-                    <p>VMSHELL INC 是一家成立于 2021 年的美國雲計算服務公司，總部位於懷俄明州謝里丹，专注于提供全球數據中心的虛擬機服務器租賃和軟件開發服務。公司旗下品牌包括 VmShell 和 ToToTel，業務覆蓋亞洲、美洲以及歐洲，致力于为企業提供高效、穩定的網絡解決方案。</p>
-                    <p>其核心服務包括虚拟私有服務器（VPS）、独立服務器以及雲端管理平台，广泛應用于企業業務拓展、流媒體優化和跨境電商等領域。</p>
-                    <p>公司主打香港和美國圣何塞两大核心數據中心。香港數據中心採用中國移動 CMIN2.HK 高速網絡，支持三网優化，提供亞洲香港 CMIN2.HK 三网大陸優化 1Gbps 和美國 10Gbps 的國際帶寬，特別適合面向中國大陸及东南亚市場的用戶。</p>
-                    <p>VMSHELL INC 以用戶體驗为核心，提供 24/7 技術支持，承諾 99.99% 的服務器在線率，并支持 PayPal、支付宝、比特币等多种支付方式，方便全球用戶。公司还開發了移動端管理應用，支持服務器運行監控、SSH 管理和 Linux 運維腳本，極大提升了用戶管理效率。</p>
-                    <p>憑藉可靠的網絡性能和靈活的服務模式，VmShell INC 已成長为雲計算領域值得信賴的品牌，未來計劃持續優化技術社區功能，擴展更多創新服務。</p>
+                    尊敬的 VmShell 用戶，您好！時光荏苒，歲月如梭。VmShell INC 全體同仁向您致以最誠摯的問候与新春祝福！<br>
+                    2026 年，对 VmShell INC 而言，更是意義非凡的一年。我們很榮幸地宣佈，VmShell INC 已经走過了五个輝煌的春秋！自 2021 年成立以來，VmShell INC 始終秉持着「客戶至上、技術創新」的服務理念，深耕雲端運算服務領域，专注于全球數據中心虛擬機服務器租賃与軟件開發。<br>
+                    我們致力于为全球用戶提供穩定、高效、安全的雲端解決方案，并感謝您五年来对我們的信任与支持，正是有了您的陪伴，我們才能不斷成長与進步。<br>
+                    为慶祝公司成立五週年，VmShell INC 特別推出一系列「VmShell2026 五週年感恩反饋活動」。我們精心準備了多項超值優惠，涵蓋香港、美國、日本及英國等多個熱門地區的優質產品，旨在为您的業務發展提供更强大的助力！<br>
+                    VMSHELL INC 是一家成立于 2021 年的美國雲計算服務公司，總部位於懷俄明州謝里丹，专注于提供全球數據中心的虛擬機服務器租賃和軟件開發服務。公司旗下品牌包括 VmShell 和 ToToTel，業務覆蓋亞洲、美洲以及歐洲，致力于为企業提供高效、穩定的網絡解決方案。<br>
+                    其核心服務包括虚拟私有服務器（VPS）、独立服務器以及雲端管理平台，广泛應用于企業業務拓展、流媒體優化和跨境電商等領域。<br>
+                    公司主打香港和美國圣何塞两大核心數據中心。香港數據中心採用中國移動 CMIN2.HK 高速網絡，支持三网優化，提供亞洲香港 CMIN2.HK 三网大陸優化 1Gbps 和美國 10Gbps 的國際帶寬，特別適合面向中國大陸及东南亚市場的用戶。<br>
+                    VMSHELL INC 以用戶體驗为核心，提供 24/7 技術支持，承諾 99.99% 的服務器在線率，并支持 PayPal、支付宝、比特币等多种支付方式，方便全球用戶。公司还開發了移動端管理應用，支持服務器運行監控、SSH 管理和 Linux 運維腳本，極大提升了用戶管理效率。<br>
+                    憑藉可靠的網絡性能和靈活的服務模式，VmShell INC 已成長为雲計算領域值得信賴的品牌，未來計劃持續優化技術社區功能，擴展更多創新服務。<br>
                     <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                        <a href="https://vmshell.com/" target="_blank" class="text-blue-600 font-semibold hover:text-blue-700">🌐 VmShell 官方網站 →</a>
+                        <a href="https://vmshell.com/" target="_blank" class="text-blue-600 font-semibold hover:text-blue-700">🌐 VmShell 香港CMI →</a>
                         <a href="https://tototel.com/" target="_blank" class="text-blue-600 font-semibold hover:text-blue-700">🌐 ToToTel 官網 →</a>
+	        <a href="https://vmbanks.com/" target="_blank" class="text-blue-600 font-semibold hover:text-blue-700">🌐 VmBanks 银行 →</a>
                     </div>
                 </div>
                 <img src="https://linuxword.com/wp-content/uploads/2026/02/vmshellvpscom.jpg" alt="VmShell VPS" class="w-full rounded-xl shadow-md mt-8">
