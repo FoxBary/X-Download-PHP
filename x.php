@@ -726,7 +726,7 @@ $testimonials = [
                         <h3 class="text-xl font-bold text-slate-900 mb-4">日本·產品 F</h3>
                         <div class="space-y-2 text-sm text-slate-700 mb-6">
                             <p><strong>IP 歸屬:</strong> 日本</p>
-                            <p><strong>配置:</strong> 1 核 / 1GB 內存 / 10GB SSD + 4TB 流量</p>
+                            <p><strong>配置:</strong> 1 核 / 1GB 內存 / 10GB + 4TB 流量</p>
                             <p><strong>帶寬:</strong> 國際 10Gbps</p>
                             <p><strong>流媒體:</strong> 仅支持 AI</p>
                             <p><strong>優惠码:</strong> <code class="bg-slate-100 px-2 py-1 rounded">jphuigui</code></p>
