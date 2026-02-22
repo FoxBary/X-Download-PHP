@@ -542,7 +542,7 @@ $testimonials = [
                     <?php
                     if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST["ip_address"])) {
                         $ip = htmlspecialchars($_POST["ip_address"]);
-                        $api_key = '2e08c5cc649877';
+                        $api_key = 'IPINFO的参数';
                         $api_url = "https://ipinfo.io/{$ip}/json?token={$api_key}";
                         $response = @file_get_contents($api_url);
                         $ip_info = json_decode($response);
@@ -578,7 +578,7 @@ $testimonials = [
                                 echo "<div class='space-y-4 pt-6 border-t border-slate-200'>";
                                 echo "<h3 class='text-2xl font-bold text-slate-900'>🗺️ 地圖定位</h3>";
                                 echo "<div id='map' class='w-full h-96 rounded-lg border border-slate-200 shadow-md'></div>";
-                                echo "<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBvBAqjQ6f2APqfkhUl5WL3_utydnVnJow'></script>";
+                                echo "<script src='https://maps.googleapis.com/maps/api/js?key=谷歌参数'></script>";
                                 echo "<script>
                                     function initMap() {
                                         const myLatLng = {lat: {$latitude}, lng: {$longitude}};
